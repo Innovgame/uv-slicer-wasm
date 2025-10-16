@@ -11,12 +11,13 @@
 
 emscripten::val encodePrzImage(const emscripten::val &param)
 {
+
     using namespace std::chrono;
     auto startTime = high_resolution_clock::now();
-
     const auto &data = emscripten::convertJSArrayToNumberVector<uint8_t>(param["data"]);
     const auto length = data.size();
     const auto useColorDiffCompression = param["useColorDiffCompression"].as<bool>();
+    LOG_INFO("length: {}", length);
 
     const uint8_t LayerMagic = 0x55;
     std::vector<uint8_t> rle;
@@ -136,8 +137,8 @@ emscripten::val encodePrzImage(const emscripten::val &param)
     double durationMs = duration<double, std::milli>(endTime - startTime).count();
 
     // 输出耗时到控制台
-    LOG_DEBUG("encodePrzImage layer encoded: {} ms, input size: {} bytes, output size: {} bytes\n", durationMs, length,
-              rle.size());
+    LOG_INFO("encodePrzImage layer encoded: {} ms, input size: {} bytes, output size: {} bytes", durationMs, length,
+             rle.size());
 
     return emscripten::val(emscripten::typed_memory_view<uint8_t>(rle.size(), rle.data()));
 }

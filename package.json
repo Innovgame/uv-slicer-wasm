@@ -1,7 +1,7 @@
 {
     "name": "uv-slicer-wasm",
     "private": false,
-    "version": "0.0.4",
+    "version": "0.0.7",
     "description": "uv slicer wasm",
     "type": "module",
     "license": "MIT",
@@ -16,7 +16,8 @@
     },
     "files": [
         "dist",
-        "dist/uv-slicer-wasm.d.ts"
+        "dist/uv-slicer-wasm.d.ts",
+        "lib/wasm/**"
     ],
     "keywords": [
         "uv-slicer",
@@ -32,6 +33,7 @@
             "import": "./dist/uv-slicer-wasm.js",
             "require": "./dist/uv-slicer-wasm.umd.cjs"
         },
+        "./lib/wasm/uv-slicer.wasm": "./lib/wasm/uv-slicer.wasm",
         "./*": "./*"
     },
     "devDependencies": {
