@@ -22,7 +22,8 @@
     "keywords": [
         "uv-slicer",
         "resin",
-        "wasm"
+        "wasm",
+        "converter"
     ],
     "main": "./dist/uv-slicer-wasm.umd.cjs",
     "module": "./dist/uv-slicer-wasm.js",
