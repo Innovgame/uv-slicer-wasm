@@ -38,7 +38,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${FLAGS}")
 target_include_directories(${PROJECT_NAME} PRIVATE ${CPP_DIR} ${CPP_INCLUDE_DIR})
 
 # copy output to tango-web
-set(DESTINATION_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/dist) # 目标目录名称
+set(DESTINATION_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/wasm) # 目标目录名称
 
 find_program(PYTHON_EXECUTABLE NAMES python3 python)
 
