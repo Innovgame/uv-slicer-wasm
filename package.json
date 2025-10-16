@@ -1,7 +1,7 @@
 {
     "name": "uv-slicer-wasm",
     "private": false,
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "uv slicer wasm",
     "type": "module",
     "license": "MIT",
