@@ -58,18 +58,21 @@ Typical conversion times on modern browsers:
 
 ```typescript
 declare interface EmbindModule {
+    encodePwsImage(_0: any): any;
+    encodePw0Image(_0: any): any;
     encodePrzImage(_0: any): any;
 }
 
-export declare function init(wasmURL: string): Promise<MainModule>;
+export declare function init(wasmURL: string): Promise<UVSlicerModule>;
 
-declare type MainModule = WasmModule & EmbindModule;
+export declare type UVSlicerModule = WasmModule & EmbindModule;
 
 declare interface WasmModule {
     _main(_0: number, _1: number): number;
 }
 
 export { }
+
 
 ```
 
