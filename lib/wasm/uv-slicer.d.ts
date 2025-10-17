@@ -4,6 +4,8 @@ interface WasmModule {
 }
 
 interface EmbindModule {
+  encodePwsImage(_0: any): any;
+  encodePw0Image(_0: any): any;
   encodePrzImage(_0: any): any;
 }
 

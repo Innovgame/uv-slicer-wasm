@@ -17,7 +17,6 @@ emscripten::val encodePrzImage(const emscripten::val &param)
     const auto &data = emscripten::convertJSArrayToNumberVector<uint8_t>(param["data"]);
     const auto length = data.size();
     const auto useColorDiffCompression = param["useColorDiffCompression"].as<bool>();
-    LOG_INFO("length: {}", length);
 
     const uint8_t LayerMagic = 0x55;
     std::vector<uint8_t> rle;
