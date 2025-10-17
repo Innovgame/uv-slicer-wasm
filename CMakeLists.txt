@@ -11,7 +11,7 @@ set(CPP_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/cpp/include)
 set(WEB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/cpp/web)
 
 if(NOT DEFINED LOG_LEVEL)
-    set(LOG_LEVEL 2) # 默认启用 INFO 级别
+    set(LOG_LEVEL 0) # 默认启用 INFO 级别
 endif()
 
 message(STATUS "build wasm")

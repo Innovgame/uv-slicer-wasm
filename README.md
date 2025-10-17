@@ -82,7 +82,8 @@ cd uv-slicer-wasm
 
 # Build WASM
 mkdir build && cd build
-emcmake ..
+emcmake cmake ..
+cmake --build . -j32 --clean-first
 
 # Build JS wrapper
 npm install

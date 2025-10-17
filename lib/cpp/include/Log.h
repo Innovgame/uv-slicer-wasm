@@ -1,4 +1,4 @@
-// Log.h
+// log.h
 #pragma once
 
 #include <cstring> // for strrchr

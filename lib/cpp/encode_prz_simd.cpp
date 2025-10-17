@@ -142,7 +142,7 @@ emscripten::val encodePrzImage(const emscripten::val &param)
     return emscripten::val(emscripten::typed_memory_view<uint8_t>(rle.size(), rle.data()));
 }
 
-EMSCRIPTEN_BINDINGS(UvSlicerWrapper)
+EMSCRIPTEN_BINDINGS(UvSlicerPrz)
 {
     emscripten::function("encodePrzImage", &encodePrzImage);
 }

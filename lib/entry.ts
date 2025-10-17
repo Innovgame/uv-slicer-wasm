@@ -8,3 +8,5 @@ export async function init(wasmURL: string) {
     });
     return module;
 }
+
+export { type MainModule as UVSlicerModule } from "./wasm/uv-slicer";
