@@ -1,10 +1,8 @@
 import MainModuleFactory from "./wasm/uv-slicer";
 
-export async function init(wasmURL: string) {
-    const res = await fetch(wasmURL);
-    const arrayBuffer = await res.arrayBuffer();
+export async function init(wasmBinary: ArrayBuffer) {
     const module = await MainModuleFactory({
-        wasmBinary: arrayBuffer,
+        wasmBinary: wasmBinary,
     });
     return module;
 }
