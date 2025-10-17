@@ -30,7 +30,7 @@ This WebAssembly library converts bitmap image data into various resin 3D printe
 
 ### NPM
 ```bash
-npm install slice-format-converter
+npm install uv-slicer-wasm
 ```
 
 ## Usage
